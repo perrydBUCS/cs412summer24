@@ -1,9 +1,9 @@
-// const colorCodes = {
-//     blue:   1,
-//     red:    2,
-//     add:    (left, right) => left + right
-// }
-//
+const colorCodes = {
+    blue:   1,
+    red:    2,
+    add:    (left, right) => left + right
+}
+
 // console.log(`Blue is code ${colorCodes.blue}`);
 // console.log(`40 + 2 is ${colorCodes.add(40,2)}`);
 

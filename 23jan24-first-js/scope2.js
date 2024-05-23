@@ -10,10 +10,10 @@
 // }
 // bar()
 // console.log(foo)
-let foo = 16
+var foo = 16
 console.log(count)
-for ( let count = 0; count < 5; count++) {
-    let foo = 5
+for ( var count = 0; count < 5; count++) {
+    var foo = 5
 
     foo++
 }
