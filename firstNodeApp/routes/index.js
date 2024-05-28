@@ -11,11 +11,15 @@ router.get('/',
 res.json({name: 'Fred', instrument: 'guitar'})
 });
 
-router.get('/hey', (req, res, next) => {
+//We match the URL *and* the method, so this one is GET:/hey
+router.get('/hey',
+    (req,
+     res,
+     next) => {
   res.send('now');
 })
-
+//...this one is POST:/hey
 router.post('/hey', (req, res, next) => {
   res.send('NOWPOST');
 })
-module.exports = router;
+module.exports = router; //exporting = making it visible

@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const bazeebleRouter = require('./routes/wx');
 
 var app = express();
 
@@ -16,7 +17,7 @@ app.set('view engine', 'pug');
 //MIDDLEWARE, runs on every request
 app.use(logger('dev'));
 app.use(express.json());
-app.use((
+app.use(( //we wrote this one...
     req,
     res,
     next) => {
@@ -27,7 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', indexRouter); //we say that we are "mounting" the file on this URL...
+app.use('/bazeeble', bazeebleRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
