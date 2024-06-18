@@ -22,4 +22,5 @@ router.get('/hey',
 router.post('/hey', (req, res, next) => {
   res.send('NOWPOST');
 })
+let foo=0;
 module.exports = router; //exporting = making it visible
