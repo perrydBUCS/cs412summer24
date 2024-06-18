@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from "rxjs";
 import {FormGroup} from '@angular/forms';
-import {config as API} from '../config/openweather'
+//import {config as API} from '../config/openweather'
+import {config as API} from '../config/wxBackend' //our Node backend
 import {WeatherResponse} from '../interfaces/Weather'
 
 @Injectable({
